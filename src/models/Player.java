@@ -12,16 +12,6 @@ public class Player {
         this.symbol = symbol;
         this.type = type;
     }
-    public Move makeMove(Board board){
-        //ask user for the position of their symbol
-        System.out.println("Please enter row where you want to make your move: ");
-        int row = sc.nextInt();
-        System.out.println("Please enter col where you want to make your move: ");
-        int col = sc.nextInt();
-
-        return new Move(new Cell(row, col), this);
-    }
-
     public String getName() {
         return name;
     }
@@ -45,4 +35,15 @@ public class Player {
     public void setType(PlayerType type) {
         this.type = type;
     }
+    public Move makeMove(Board board){
+        //ask user for the position of their symbol
+        System.out.println("Please enter row where you want to make your move: ");
+        int row = sc.nextInt();
+        System.out.println("Please enter col where you want to make your move: ");
+        int col = sc.nextInt();
+
+        return new Move(new Cell(row, col), this);
+    }
+
+
 }
